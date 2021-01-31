@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet"  type="text/css" href="{% static "css/style.css" %}">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="output_field">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_table}}
+                <button type="submit" class="">Перевести</button>
+            </form>
+        </div>
+        <div class="results">
+            <h2>Результат: </h2>
+            {{ string_numb }}<br>
+        </div>
+        <div class="history">
+            <h2>История ввода</h2>
+            {% for hist in history %}
+                {{ hist }}<br>
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    {% now 'Y' %} <span>год</span><br><span>Поляков Федор</span>
+</div>
+
+</body>
+</html>

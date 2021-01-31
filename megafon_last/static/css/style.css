@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+    margin: 30px auto;
+    width: 900px;
+}
+
+.output_field {
+    margin: 20px auto;
+}
+
+.results, .history {
+    margin: 20px auto;
+}
